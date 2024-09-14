@@ -1,5 +1,3 @@
-package com.example.tests;
-
 import ServiceHelper.ServiceHandler;
 import Utils.APIEndpoints;
 import Utils.ReportSetup;

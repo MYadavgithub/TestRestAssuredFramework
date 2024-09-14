@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="API Automation Suite">
+<suite name="All Test Suite">
     <listeners>
         <listener class-name="Utils.SuiteListener"></listener>
     </listeners>
-    <test verbose="2" preserve-order="true" name="API Tests">
+    <test verbose="2" preserve-order="true" name="D:/RetrofitProject/src/test/resources">
         <classes>
-            <!-- Fully qualified class name -->
-            <class name="com.example.tests.getListUsers"></class>
+            <class name="getListUsers"></class>
         </classes>
     </test>
 </suite>
