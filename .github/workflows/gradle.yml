@@ -42,13 +42,8 @@ jobs:
       run: |
         echo "APIAutomationReport is available at: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload.outputs.artifact_id }}"
         
-    - name: Upload TestNG Report
+    - name: Upload TestNG Report Directory
       uses: actions/upload-artifact@v3
       with:
         name: testng-report
-        path: build/reports/tests/test/index.html
-
-    - name: Print TestNG Report URL
-      run: |
-        echo "The TestNG report URL is:"
-        echo "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload.outputs.artifact_id }}"
+        path: build/reports/tests/test/
