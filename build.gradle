@@ -35,5 +35,8 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 test {
-    useJUnitPlatform()
+    useTestNG {
+        // Configure the TestNG report listener
+        suites 'src/test/resources/testng.xml'
+    }
 }
