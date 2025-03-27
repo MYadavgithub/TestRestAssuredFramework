@@ -1,15 +1,12 @@
 package ServiceHelper;
 
 import ServiceHelper.PojoPayloads.CreateUserRequest;
-import Utils.GenericBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class RequestBodyBuilder {
 
     public static String getCreateUserAPIRequest(String name, String job){
-        CreateUserRequest createUserRequestObj=  GenericBuilder.build(CreateUserRequest.class)
-        .with(s->s.setName(name))
-                .with(s->s.setJob(job)).get();
+        CreateUserRequest createUserRequestObj=  CreateUserRequest.builder().name(name).job(job).build();
         return returnJsonString(createUserRequestObj);
     }
 

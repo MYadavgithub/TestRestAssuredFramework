@@ -63,7 +63,7 @@ public class ReportSetup {
         extentReports.flush();
     }
 
-    public void reportLog(String message){
+    public static void reportLog(String message){
         logger.info(message);
         Reporter.log(message,true);
     }
