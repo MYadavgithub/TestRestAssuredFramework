@@ -1,4 +1,4 @@
-package ServiceHelper.PojoPayloads;
+package com.company.restframework.models;
 
 import lombok.Builder;
 import lombok.Getter;

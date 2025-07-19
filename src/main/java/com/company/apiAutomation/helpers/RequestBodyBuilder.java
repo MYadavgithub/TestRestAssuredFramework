@@ -1,7 +1,7 @@
-package ServiceHelper;
+package com.company.restframework.helpers;
 
-import ServiceHelper.PojoPayloads.CreateUserRequest;
-import Utils.CommonUtils;
+import com.company.restframework.models.CreateUserRequest;
+import com.company.restframework.utils.CommonUtils;
 
 public class RequestBodyBuilder {
 

@@ -1,4 +1,4 @@
-package Properties;
+package com.company.restframework.config;
 
 public class TestProperties {
     private static PropertyReader propertyReader = new PropertyReader();

@@ -1,4 +1,4 @@
-package Properties;
+package com.company.restframework.config;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

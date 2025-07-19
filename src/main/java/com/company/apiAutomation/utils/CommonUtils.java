@@ -1,4 +1,4 @@
-package Utils;
+package com.company.restframework.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

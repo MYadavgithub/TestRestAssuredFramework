@@ -1,4 +1,4 @@
-package ServiceHelper;
+package com.company.apiAutomation.helpers;
 
 import java.util.HashMap;
 import java.util.Map;
