@@ -1,64 +1,15 @@
-Headers:		x-consumer-name=AG
-				deviceId=iphone-13
-				platform=IOS
-				Accept=*/*
-"				Content-Type=application/json
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Multiparts:		<none>
-Body:
-{
-    "name": "AG",
-    "job": "Tester"
-}
-Request method:	POST
-)Request URI:	https://reqres.in/api/users
+Executed POST API: /api/users
 $============API Response===========
 'API response status code is 2XX series
-Headers:		x-consumer-name=AG
-				deviceId=iphone-13
-				platform=IOS
-				Accept=*/*
-				x-consumer-name=AG
-				deviceId=iphone-13
-				platform=IOS
-"				Content-Type=application/json
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Multiparts:		<none>
-Body:
-{
-    "name": "AG",
-    "job": "Tester"
-}
-Request method:	GET
-)Request URI:	https://reqres.in/api/users
+API FAILED: GET /api/users
+Status Code: 401
+|Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}
+Query Params: {}
+YResponse Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}
 $============API Response===========
-'API response status code is 2XX series
-Headers:		x-consumer-name=AG
-				deviceId=iphone-13
-				platform=IOS
-				Accept=*/*
-				x-consumer-name=AG
-				deviceId=iphone-13
-				platform=IOS
-				x-consumer-name=AG
-				deviceId=OnePlus9
-				platform=android
-"				Content-Type=application/json
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Multiparts:		<none>
-Body:
-{
-    "name": "AG",
-    "job": "Tester"
-}
-Request method:	GET
-)Request URI:	https://reqres.in/api/users
+J{"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}
+API FAILED: GET /api/users
+Status Code: 401
+|Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}
+Query Params: {}
+YResponse Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}

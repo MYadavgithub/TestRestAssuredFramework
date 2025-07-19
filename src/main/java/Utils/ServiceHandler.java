@@ -3,11 +3,10 @@ package Utils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.testng.Reporter;
 
 import java.util.Map;
 
-public class ServiceHandler {
+public class ServiceHandler extends ReportSetup {
 
     private final RequestSpecification requestSpec;
 
@@ -40,26 +39,25 @@ public class ServiceHandler {
         int statusCode = response.getStatusCode();
         String responseBody = response.getBody().asString();
 
-        // ✅ Only log full details if the API request fails
+        // Log summary for successful requests
         if (statusCode >= 200 && statusCode < 300 && responseBody != null && !responseBody.isEmpty()) {
-            Reporter.log("<b>Executed " + method + " API:</b> " + endpoint, true);
+            reportLog("Executed " + method + " API: " + endpoint);
             return;
         }
 
-        // 🔴 If there's an error, log all API details
-        Reporter.log("<font color='red'><b>API FAILED:</b> " + method + " " + endpoint + "</font>", true);
-        Reporter.log("<b>Status Code:</b> " + statusCode, true);
-        Reporter.log("<b>Headers:</b> " + headers, true);
-        Reporter.log("<b>Query Params:</b> " + queryParams, true);
-        
-        if (requestBody != null) {
-            Reporter.log("<b>Request Body:</b> " + requestBody, true);
-        }
+        // Log full details for failed requests
+        reportLog("API FAILED: " + method + " " + endpoint);
+        reportLog("Status Code: " + statusCode);
+        reportLog("Headers: " + headers);
+        reportLog("Query Params: " + queryParams);
 
+        if (requestBody != null) {
+            reportLog("Request Body: " + requestBody);
+        }
         if (responseBody == null || responseBody.isEmpty()) {
-            Reporter.log("<font color='red'><b>Response body is NULL or EMPTY!</b></font>", true);
+            reportLog("Response body is NULL or EMPTY!");
         } else {
-            Reporter.log("<b>Response Body:</b> " + responseBody, true);
+            reportLog("Response Body: " + responseBody);
         }
     }
 }

@@ -7,6 +7,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo1.maven.org/maven2' } // Ensure this is included
 }
 
 dependencies {
@@ -16,14 +17,17 @@ dependencies {
     implementation 'org.apache.poi:poi-ooxml-schemas:4.1.2'
     implementation 'org.apache.commons:commons-collections4:4.4'
 
-    // Other dependencies
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    // TestNG dependencies (both implementation and testImplementation)
+    implementation 'org.testng:testng:7.9.0'
+    testImplementation 'org.testng:testng:7.9.0'
+    
+    // Rest Assured dependencies
     implementation 'io.rest-assured:rest-assured:4.5.0'
     implementation 'io.rest-assured:json-path:4.5.0'
     implementation 'io.rest-assured:json-schema-validator:4.5.0'
     implementation 'io.rest-assured:rest-assured-common:4.5.0'
-    implementation 'org.testng:testng:6.9.10'
+    
+    // Other dependencies
     implementation 'com.aventstack:extentreports:4.0.4'
     implementation 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok:1.18.22'
@@ -31,12 +35,21 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 }
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
 
 test {
-    useTestNG {
-        // Configure the TestNG report listener
+    useTestNG() {
+        useDefaultListeners = true
         suites 'src/test/resources/testng.xml'
+    }
+    testLogging {
+        events "passed", "skipped", "failed"
     }
 }

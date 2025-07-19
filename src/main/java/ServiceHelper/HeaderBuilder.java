@@ -11,15 +11,8 @@ public class HeaderBuilder {
         headers.put("x-consumer-name","AG");
         headers.put("deviceId","OnePlus9");
         headers.put("platform","android");
+        headers.put("x-api-key","reqres-free-v1");
         return headers;
     }
 
-    public static Map<String,String> getIOSHeaders(){
-        Map<String,String> headers = new HashMap<>();
-        headers.put("content-Type","application/json");
-        headers.put("x-consumer-name","AG");
-        headers.put("deviceId","iphone-13");
-        headers.put("platform","IOS");
-        return headers;
-    }
 }
