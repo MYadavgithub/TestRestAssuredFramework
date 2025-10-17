@@ -1,4 +1,4 @@
-package Utils;
+package com.company.apiAutomation.utils;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

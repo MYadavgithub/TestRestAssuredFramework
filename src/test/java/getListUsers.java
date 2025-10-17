@@ -1,6 +1,7 @@
 import com.company.apiAutomation.endpoints.APIEndpoints;
-import Utils.ReportSetup;
-import Utils.ServiceHandler;
+import com.company.apiAutomation.utils.ReportSetup;
+import com.company.apiAutomation.utils.ServiceHandler;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 

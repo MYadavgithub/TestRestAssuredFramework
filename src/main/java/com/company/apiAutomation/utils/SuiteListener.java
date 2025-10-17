@@ -1,4 +1,4 @@
-package Utils;
+package com.company.apiAutomation.utils;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
