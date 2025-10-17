@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>D:/RetrofitProject/src/test/resources</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 04 09:16:30 IST 2025</td>
+<td>Started on:</td><td>Fri Oct 17 22:05:13 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1937 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1522 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,23 +77,23 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='getListUsers.verifyGetListUsersWhenPageNumberIsSentInQueryParam()'><b>verifyGetListUsersWhenPageNumberIsSentInQueryParam</b><br>Test class: getListUsers<br/>
-<a href="#Output-1655627208" onClick='toggleBox("Output-1655627208", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1379066865" onClick='toggleBox("Output-1379066865", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1655627208" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1655627208">
+<a href="#Output-1379066865" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1379066865">
 API FAILED: GET /api/users<br/>
-Status Code: 401<br/>
+Status Code: 403<br/>
 Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}<br/>
-Query Params: {}<br/>
-Response Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}<br/>
-============API Response===========<br/>
-{"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}<br/>
+Query Params: {page=1}<br/>
+Response Body: {"error":"Invalid or inactive API key"}<br/>
 Print failure message or API response<br/>
 </div>
 </td>
-<td><div><pre>java.lang.NullPointerException
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at getListUsers.verifyGetListUsersWhenPageNumberIsSentInQueryParam(getListUsers.java:47)
+<td><div><pre>java.lang.AssertionError: response status code is not in 2XX series expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at getListUsers.verifyGetListUsersWhenPageNumberIsSentInQueryParam(getListUsers.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -140,10 +140,12 @@ Print failure message or API response<br/>
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1655627208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1655627208'><pre>java.lang.NullPointerException
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at getListUsers.verifyGetListUsersWhenPageNumberIsSentInQueryParam(getListUsers.java:47)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1379066865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1379066865'><pre>java.lang.AssertionError: response status code is not in 2XX series expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at getListUsers.verifyGetListUsersWhenPageNumberIsSentInQueryParam(getListUsers.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,123 +194,7 @@ Print failure message or API response<br/>
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </pre></div></td>
 <td>0</td>
-<td>getListUsers@278f8425</td></tr>
-<tr>
-<td title='getListUsers.verifyGetListUsersWithoutQueryParam()'><b>verifyGetListUsersWithoutQueryParam</b><br>Test class: getListUsers<br/>
-<a href="#Output-1075708596" onClick='toggleBox("Output-1075708596", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1075708596" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1075708596">
-API FAILED: GET /api/users<br/>
-Status Code: 401<br/>
-Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}<br/>
-Query Params: {}<br/>
-Response Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}<br/>
-Print failure message or API response<br/>
-</div>
-</td>
-<td><div><pre>java.lang.NullPointerException
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at getListUsers.verifyGetListUsersWithoutQueryParam(getListUsers.java:29)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:148)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1075708596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1075708596'><pre>java.lang.NullPointerException
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at getListUsers.verifyGetListUsersWithoutQueryParam(getListUsers.java:29)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:148)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></div></td>
-<td>0</td>
-<td>getListUsers@278f8425</td></tr>
+<td>getListUsers@4d4960c8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -320,19 +206,17 @@ Print failure message or API response<br/>
 </tr>
 <tr>
 <td title='getListUsers.verifyCreateUserFlow()'><b>verifyCreateUserFlow</b><br>Test class: getListUsers<br/>
-<a href="#Output-700631078" onClick='toggleBox("Output-700631078", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-775174220" onClick='toggleBox("Output-775174220", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-700631078" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-700631078">
+<a href="#Output-775174220" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-775174220">
 Executed POST API: /api/users<br/>
-============API Response===========<br/>
-API response status code is 2XX series<br/>
 Print success message or API response<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>getListUsers@278f8425</td></tr>
+<td>getListUsers@4d4960c8</td></tr>
 </table><p>
 </body>
 </html>

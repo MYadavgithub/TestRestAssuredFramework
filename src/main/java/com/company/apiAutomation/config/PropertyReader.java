@@ -1,4 +1,4 @@
-package com.company.restframework.config;
+package com.company.apiAutomation.config;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

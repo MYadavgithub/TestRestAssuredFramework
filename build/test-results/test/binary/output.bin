@@ -1,15 +1,6 @@
 Executed POST API: /api/users
-$============API Response===========
-'API response status code is 2XX series
 API FAILED: GET /api/users
-Status Code: 401
+Status Code: 403
 |Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}
-Query Params: {}
-YResponse Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}
-$============API Response===========
-J{"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}
-API FAILED: GET /api/users
-Status Code: 401
-|Headers: {x-consumer-name=AG, x-api-key=reqres-free-v1, content-Type=application/json, deviceId=OnePlus9, platform=android}
-Query Params: {}
-YResponse Body: {"error":"Invalid API key.","how_to_get_one":"https://reqres.in/upgrade"}
+Query Params: {page=1}
+7Response Body: {"error":"Invalid or inactive API key"}

@@ -9,11 +9,10 @@
       <class name="getListUsers">
         <methods>
           <include name="afterTestMethod"/>
-          <include name="verifyGetListUsersWithoutQueryParam"/>
           <include name="afterMethodMethod"/>
           <include name="beforeTestMethod"/>
-          <include name="beforeMethodmethod"/>
           <include name="verifyGetListUsersWhenPageNumberIsSentInQueryParam"/>
+          <include name="beforeMethodmethod"/>
         </methods>
       </class> <!-- getListUsers -->
     </classes>

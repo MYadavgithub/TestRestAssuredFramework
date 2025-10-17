@@ -1,4 +1,4 @@
-package com.company.restframework.models;
+package com.company.apiAutomation.models;
 
 import lombok.Builder;
 import lombok.Getter;

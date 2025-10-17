@@ -1,4 +1,4 @@
-package com.company.restframework.endpoints;
+package com.company.apiAutomation.endpoints;
 
 public interface APIEndpoints {
 

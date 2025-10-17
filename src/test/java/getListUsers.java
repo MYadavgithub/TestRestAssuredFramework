@@ -1,4 +1,4 @@
-import Utils.APIEndpoints;
+import com.company.apiAutomation.endpoints.APIEndpoints;
 import Utils.ReportSetup;
 import Utils.ServiceHandler;
 import io.restassured.path.json.JsonPath;
@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import java.util.HashMap;
 
-import static Properties.TestProperties.REQRES_TestHost;
-import static ServiceHelper.HeaderBuilder.getHeaders;
-import static ServiceHelper.RequestBodyBuilder.getCreateUserAPIRequest;
+import static com.company.apiAutomation.config.TestProperties.REQRES_TestHost;
+import static com.company.apiAutomation.helpers.HeaderBuilder.getHeaders;
+import static com.company.apiAutomation.helpers.RequestBodyBuilder.getCreateUserAPIRequest;
 
 
 public class getListUsers extends ReportSetup {

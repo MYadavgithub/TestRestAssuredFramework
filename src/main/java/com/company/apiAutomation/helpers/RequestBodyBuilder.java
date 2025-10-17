@@ -1,7 +1,7 @@
-package com.company.restframework.helpers;
+package com.company.apiAutomation.helpers;
 
-import com.company.restframework.models.CreateUserRequest;
-import com.company.restframework.utils.CommonUtils;
+import com.company.apiAutomation.models.CreateUserRequest;
+import com.company.apiAutomation.utils.CommonUtils;
 
 public class RequestBodyBuilder {
 

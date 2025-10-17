@@ -1,4 +1,4 @@
-package com.company.restframework.utils;
+package com.company.apiAutomation.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
